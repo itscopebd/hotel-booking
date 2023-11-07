@@ -1,52 +1,275 @@
-*{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-decoration: none;
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 
-:root{
-    --primary:#D38C14;
-    --seconday:#269F8E;
+:root {
+  --primary: #d38c14;
+  --seconday: #269f8e;
+  --gray: #d9d9d9;
 }
 
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.col__two{
-    display: flex;
-    justify-content: space-between;
-    gap: 20px;
-    align-items: center;
+ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
 }
-ul{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    gap: 30px;
+a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
 }
-a{
-    color: #fff;
-    font-weight: 500;
-    font-size: 18px;
+.btn {
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-size: 18px;
+  line-height: 18px;
+  margin-top: 20px;
+  cursor: pointer;
+  color: #fff;
+  border: none;
+  background-color: var(--primary);
 }
+.btn__wrap {
+  text-align: center;
+  margin-top: 5px;
+}
+
+.section__gap {
+    padding: 10px 0;
+  margin: 40px 0;
+}
+
+.section__title {
+  font-size: 35px;
+  font-weight: 500;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.col__two {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.col__four {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.card__img {
+  border-radius: 5px;
+  width: 100%;
+  position: relative;
+}
+
+.card__img::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary);
+  content: "";
+  z-index: 22;
+}
+
+.card__title {
+  font-size: 22px;
+  line-height: 30px;
+  font-weight: 500;
+  margin: 5px 0;
+  color: var(--primary);
+  transition: 0.5s;
+}
+.card__des {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: normal;
+  color: black;
+}
+.card:hover .card__title {
+  color: var(--seconday);
+  transition: 0.5s;
+}
+
 /*----------------------
  header css start here
 ------------------------*/
 
 header {
-    background: var(--primary);
-    padding: 20px 0;
+  background: var(--primary);
+  padding: 20px 0;
 }
-.menu{
-    display: flex;
-    gap: 50px;
-    align-items: center;
+.menu {
+  display: flex;
+  gap: 50px;
+  align-items: center;
 }
+
 /*----------------------
  header css end here
+-----------------------*/
+
+/*----------------------
+ banner section css start here
+-----------------------*/
+
+#banner {
+  width: 100%;
+  height: 80vh;
+  background: url("../images/banner.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+}
+
+#banner .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+#banner .container,
+#banner .col__two {
+  height: 100%;
+  z-index: 9999;
+}
+.content__wrap {
+  height: 100%;
+  position: absolute;
+  z-index: 999;
+}
+.banner__title {
+  font-size: 50px;
+  color: #fff;
+  line-height: 55px;
+}
+/*----------------------
+ banner section css end here
+-----------------------*/
+
+/*----------------------
+ Form section css start here
+-----------------------*/
+#checking {
+  margin-top: 30px;
+}
+.form__field__wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+#checking .container form {
+  background-color: var(--gray);
+  padding: 20px;
+}
+.form__field__wrap > div {
+  width: 20%;
+}
+.form__field__wrap sup {
+  color: var(--primary);
+  font-size: 18px;
+  font-weight: 700;
+}
+.form__field__wrap label {
+  width: 100%;
+  display: block;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+input[type="date"],
+select {
+  width: 100%;
+  display: block;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-weight: 500;
+  outline: none;
+}
+
+/*----------------------
+ Form section css end here
+-----------------------*/
+
+/*----------------------
+ facilities section css end here
+-----------------------*/
+#facilities .col__two {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  align-items:normal;
+}
+#facilities .col__two img {
+    width: 100%;
+    height: 100%;
+}
+#facilities .card__wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+#facilities .card {
+    box-shadow: 1px 1px 9px 0px rgba(110,103,103,0.75);
+    -webkit-box-shadow: 1px 1px 5px 0px rgba(110,103,103,0.25);
+    -moz-box-shadow: 1px 1px 9px 0px rgba(110,103,103,0.75);
+    padding: 30px 10px;
+    cursor: pointer;
+    text-align: center;
+    transition: .5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#facilities h6 {
+    font-size: 16px;
+    line-height: 25px;
+    margin: 10px 0;
+    color: #8f8888;
+}
+#facilities h3 {
+    font-size: 25px;
+    line-height: 25px;
+    font-weight: 400;
+}
+#facilities i{
+    font-size: 25px;
+}
+#facilities .card:hover{
+    background-color: var(--primary);
+    transition: .5s;
+}
+#facilities .card:hover i,#facilities .card:hover h3, #facilities .card:hover h6{
+ color: #fff;
+    transition: .5s;
+}
+/*----------------------
+ facilities section css end here
 -----------------------*/

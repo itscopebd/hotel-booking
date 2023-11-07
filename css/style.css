@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --primary:#D38C14;
+    --seconday:#269F8E;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.col__two{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+}
+a{
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+}
+/*----------------------
+ header css start here
+------------------------*/
+
+header {
+    background: var(--primary);
+    padding: 20px 0;
+}
+.menu{
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+/*----------------------
+ header css end here
+-----------------------*/
